@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<title>WebGL - Canvas test</title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+	<script type="text/javascript" src="glMatrix.js"></script>
+	<script type="text/javascript" src="callbacks.js"></script>
+	<script type="text/javascript" src="glCourseBasis.js"></script>
+	<script type="text/javascript" src="objLoader.js"></script>
+
+	<style type="text/css">
+		#first {
+			width: 805px;
+			float:left; 
+		}
+		#second {
+			overflow: hidden; 
+		}
+	</style>
+
+</head>
+
+
+<body onload="webGLStart();">
+	<div id="first"><canvas id="WebGL-test" style="border:none;" width="800" height="600"></canvas></div>
+	<div id="second">
+		<h3>Indice de refraction</h3>
+		<select id="boolLambert" onchange="updateBoolLambert()">
+			<option value="0">Cook Torrance</option>
+			<option value="1">Lambert</option>
+		</select>
+	
+		<h3>Couleur de l'objet (Kd)</h3>
+		<input type="color" id="colorKd" value="#FFFFFF" onchange="updateColorKd()">
+		<h3>Couleur de la lumière (Li)</h3>
+		<input type="color" id="colorLi" value="#FFFFFF" onchange="updateColorLi()">
+	
+		<h3>Indice de refraction</h3>
+		<input type="range" id="refra" value="2.0" min="1.0" max="4.0" step="0.01" oninput="this.nextElementSibling.value = this.value" onchange="updateRefra()">
+		<output id="valRefra">2.0</output>
+		<select id="refra2" onchange="updateRefra2()">
+			<option value="1.0">Vide</option>
+			<option value="1.0">Air</option>
+			<option value="1.33">Eau</option>
+			<option value="1.31">Glace</option>
+			<option value="1.5">Verre</option>
+			<option value="1.78">Rubis</option>
+		</select>
+	
+		<h3>Sigma</h3>
+		<input type="range" id="sigma" value="0.4" min="0" max="1" step="0.1" oninput="this.nextElementSibling.value = this.value" onchange="updateSigma()">
+		<output>0.4</output>
+	</div>
+</body>
+
+
+</html>
