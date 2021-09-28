@@ -1,0 +1,5 @@
+img2.png 2.5
+img3.png 2
+img4.png 1.5
+img5.png 1
+img6.png 0.5
