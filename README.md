@@ -10,5 +10,15 @@ Un autre projet consistait à l’implémentation d’une méthode de transfert 
 
 Enfin le dernier projet portait sur la BRDF, la réflectivité bidirectionnelle. L’objectif était d’implémenter deux méthodes en Javascript/WebGL : Lambert et Cook Torrance. Le première donne un résultat plutôt mat et la deuxième a un reflet de lumière. Plusieurs paramètres sont modifiables : la couleur de l’objet, la couleur de la lumière, l’intensité ou l’indice de réfraction.
 
+/*=============================================================================================================================================================================*/
+
 [EN]
-Soon
+Projects from the Creative Content Capture and Production course
+
+During my Creative Content Capture and Production course, I realized several projects. The first one was the most important one and was about image processing. The objective was to implement methods to obtain High Dynamic Range (HDR) images. The first one was the Debevec method. I was inspired by the code found on a GitHub repository. I then found a function in the OpenCV library that implements this same method.
+I also had to implement the Mertens method. Here again, I found its equivalent in OpenCV. However for this method, my implementation does not work because the colors will not be retrieved. An improvement is being written.
+During one of my games, I realized that Nvidia proposes to take screenshots directly in HDR but also to modify the intensity of the images. I then applied the solutions of Debevec and Mertens that I had on these images. I compared these three solutions using several images.
+
+Another project consisted in the implementation of a color transfer method. Using two images, one of them has its colors modified for those of the other image. For this, a conversion to different color domains (RGB to LAB, RGB to XYZ, without conversion).
+
+Finally, the last project was about BRDF, the bidirectional reflectivity. The objective was to implement two methods in Javascript/WebGL: Lambert and Cook Torrance. The first one gives a rather matte result and the second one has a light reflection. Several parameters can be modified : the color of the object, the color of the light, the intensity or the refraction index.
